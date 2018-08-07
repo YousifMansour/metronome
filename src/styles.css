@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html{
+    /* min-height: 96%; */
+    /* min-width: 96%; */
+    /* max-height: 96%; */
+    /* max-width: 96%; */
+    
+}
+
+body{
+    min-height: 100%;
+    /* min-width: 100%; */
+    max-height: 100%;
+    /* max-width: 100%; */
+}
+
+.titleFont{
+    font-family: 'Cinzel', serif;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    color: black;
+}
+
+button{
+    margin: 0.5%;
+}
+

@@ -1,0 +1,42 @@
+<div class="main">
+
+  <div class="metronome-content">
+
+    <div class="input-form" style="margin: 3%;">
+
+      <form class="pure-form" style="margin: 0.5%;">
+        <input #newTempo type="tempo" placeholder="Tempo: {{tempo}}">
+      </form>
+
+      <form class="pure-form" style="margin: 0.5%;">
+        <input #newBeatsPerBar type="beats per bar" placeholder="Beats per bar: {{beatsPerBar}}">
+      </form>
+
+      <form class="pure-form" style="margin: 0.5%;">
+        <input #newClicksPerBeat type="clicks per beat" placeholder="Clicks per beat: {{clicksPerBeat}}">
+      </form>
+
+    </div>
+
+    <div class="metronome-buttons">
+
+      <button class="pure-button pure-button-primary" (click)="setOptions(newTempo.value, newBeatsPerBar.value, newClicksPerBeat.value); 
+                                                          newTempo.value = ''; 
+                                                          newBeatsPerBar.value = ''; 
+                                                          newClicksPerBeat.value = ''; 
+                                                          stop()">Set</button> 
+
+      <button class="pure-button" (click)="loop()">Loop</button>
+      <button class="pure-button" (click)="stop()">Stop</button>
+
+    </div>
+
+    <br>
+
+    <mat-slider class="volume-slider" vertical [(ngModel)]="volume" min="0" max="1" step="0.05" value="0.8"></mat-slider>
+
+    <h2>{{counter}}</h2>
+
+  </div>
+
+</div>

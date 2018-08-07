@@ -1,0 +1,16 @@
+.main{
+    
+    margin: 5px;
+    max-width: 60%;
+    min-width: 60%;
+    /* position: relative; */
+    position: fixed;
+    left: 20%;
+    right: 20%;
+}
+
+.metronome-content{
+    margin: 2%;
+    
+    
+}
