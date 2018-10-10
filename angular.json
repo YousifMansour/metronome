@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "metal-metronome": {
+    "practice-metronome": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/metal-metronome",
+            "outputPath": "dist/practice-metronome",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "metal-metronome:build"
+            "browserTarget": "practice-metronome:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "metal-metronome:build:production"
+              "browserTarget": "practice-metronome:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "metal-metronome:build"
+            "browserTarget": "practice-metronome:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "metal-metronome-e2e": {
+    "practice-metronome-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "metal-metronome:serve"
+            "devServerTarget": "practice-metronome:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "metal-metronome:serve:production"
+              "devServerTarget": "practice-metronome:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "metal-metronome"
+  "defaultProject": "practice-metronome"
 }
