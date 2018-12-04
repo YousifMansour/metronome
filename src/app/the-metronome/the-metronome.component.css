@@ -1,3 +1,62 @@
-*{
+* {
     font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.metronome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 60vw;
+    max-width: 90vw;
+}
+
+.card {
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.form-group {
+    margin: 3%;
+}
+
+.metronome form {
+    margin: 0.5%;
+    padding-bottom: 3%;
+}
+
+.metronome form h5 {
+    text-align: left;
+}
+
+.metronome h6 {
+    text-align: left
+}
+
+.metronome .slider {
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.metronome .start-button {
+    margin: 2px;
+    background-color: rgb(24, 23, 23);
+    color: white;
+}
+
+.metronome .stop-button {
+    margin: 2px;
+}
+
+@media(max-width: 1024px) {
+    .metronome {
+        min-width: 80vw;
+        max-width: 90vw;
+    }
+}
+
+@media(max-width: 640) {
+    .metronome {
+        min-width: 90vw;
+        max-width: 95vw;
+    }
 }

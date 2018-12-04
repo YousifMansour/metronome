@@ -1,60 +1,54 @@
-<div class="container" style="text-align: center;">
-  <div class="columns">
-    <div class="column col-3 col-sm-1"></div>
+<div class="metronome">
 
-    <mat-card class="column col-6 col-sm-10" style="margin-top: 3%; margin-bottom: 10%;">
-      <mat-card-content>
-        <div class="form-group" style="margin: 3%;">
+  <mat-card class="card">
+    <mat-card-content>
+      <div class="form-group">
 
-          <form style="margin: 0.5%; padding-bottom: 3%;">
-            <h5 style="text-align: left;">Tempo: {{tempo}} bpm</h5>
-            <mat-slider (change)="changeTempo($event.value)" #newTempo thumbLabel tickInterval="4" min="20" max="260" step="{{numberOfTempoSteps}}"
-              value="{{tempo}}" style="min-width:80%; max-width:80%;"></mat-slider>
-            <br>
-            <div style="text-align: left;">
-              <mat-checkbox (click)="toggleFinerSteps()">Finer Steps</mat-checkbox>
-            </div>
-          </form>
+        <form>
+          <h5>Tempo: {{tempo}} bpm</h5>
+          <mat-slider class="slider" (change)="changeTempo($event.value)" #newTempo thumbLabel tickInterval="4" min="20"
+            max="260" step="{{numberOfTempoSteps}}" value="{{tempo}}"></mat-slider>
+          <br>
+          <div style="text-align: left;">
+            <mat-checkbox (click)="toggleFinerSteps()">Finer Steps</mat-checkbox>
+          </div>
+        </form>
 
-          <!-- <br> -->
+        <mat-accordion style="padding: 1%;">
 
-          <mat-accordion style="padding: 1%;">
+          <mat-expansion-panel>
 
-            <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              More Options
+            </mat-expansion-panel-header>
 
-              <mat-expansion-panel-header>
-                More Options
-              </mat-expansion-panel-header>
+            <form style="margin: 0.5%; padding-bottom: 3%;">
 
-              <form style="margin: 0.5%; padding-bottom: 3%;">
-                <!-- <input class="form-input" #newBeatsPerBar type="beats per bar" placeholder="Beats per bar: {{beatsPerBar}}"> -->
-                <h6 style="text-align: left">Beats Per Bar: {{beatsPerBar}}</h6>
-                <mat-slider (change)="changeBeatsPerBar($event.value)" #newBeatsPerBar thumbLabel tickInterval="2" min="2" max="16" step="1"
-                  value="{{beatsPerBar}}" style="min-width:80%; max-width:0%;"></mat-slider>
-              </form>
+              <h6>Beats Per Bar: {{beatsPerBar}}</h6>
+              <mat-slider class="slider" (change)="changeBeatsPerBar($event.value)" #newBeatsPerBar thumbLabel
+                tickInterval="2" min="2" max="16" step="1" value="{{beatsPerBar}}"></mat-slider>
+            </form>
 
-              <form style="margin: 0.5%;">
-                <!-- <input class="form-input" #newClicksPerBeat type="clicks per beat" placeholder="Clicks per beat: {{clicksPerBeat}}"> -->
-                <h6 style="text-align: left">Clicks Per Beat: {{clicksPerBeat}}</h6>
-                <mat-slider (change)="changeClicksPerBeat($event.value)" #newClicksPerBeat thumbLabel tickInterval="1" min="1" max="3" step="1"
-                  value="{{clicksPerBeat}}" style="min-width:80%; max-width:80%;"></mat-slider>
-              </form>
-            </mat-expansion-panel>
-          </mat-accordion>
+            <form>
+              <h6>Clicks Per Beat: {{clicksPerBeat}}</h6>
+              <mat-slider class="sldier" (change)="changeClicksPerBeat($event.value)" #newClicksPerBeat thumbLabel
+                tickInterval="1" min="1" max="3" step="1" value="{{clicksPerBeat}}"></mat-slider>
+            </form>
+          </mat-expansion-panel>
+        </mat-accordion>
 
 
-          <mat-card-actions>
+        <mat-card-actions>
 
-            <button style="margin: 2px; background-color: rgb(24, 23, 23); color: white;" mat-stroked-button (click)="loop()">Start</button>
-            <button style="margin: 2px;" mat-stroked-button (click)="stop()">Stop</button>
-          </mat-card-actions>
-        </div>
+          <button class="start-button" mat-stroked-button (click)="loop()">Start</button>
+          <button class="stop-button" mat-stroked-button (click)="stop()">Stop</button>
+        </mat-card-actions>
+      </div>
 
-        <div>
-          <h4>{{counter}}</h4>
-        </div>
-      </mat-card-content>
-    </mat-card>
+      <div>
+        <h4>{{counter}}</h4>
+      </div>
+    </mat-card-content>
+  </mat-card>
 
-  </div>
 </div>
